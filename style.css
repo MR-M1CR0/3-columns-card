@@ -1,0 +1,130 @@
+:root {
+  --primary-bright-orange: hsl(31, 77%, 52%);
+  --primary-dark-cyan: hsl(184, 100%, 22%);
+  --primary-very-dark-cyan: hsl(179, 100%, 13%);
+
+  --neutral-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --neutral-very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--neutral-very-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100rem;
+  margin: 8rem 2rem;
+  border-radius: 5px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.list {
+  list-style: none;
+  padding: 5rem;
+}
+
+.first-component {
+  background-color: var(--primary-bright-orange);
+}
+
+.second-component {
+  background-color: var(--primary-dark-cyan);
+}
+
+.third-component {
+  background-color: var(--primary-very-dark-cyan);
+}
+
+.title {
+  margin: 3rem 0;
+  font-size: 3.5rem;
+  font-family: 'Big Shoulders Display', cursive;
+  color: var(--neutral-very-light-gray);
+  text-transform: uppercase;
+}
+
+.paragraph {
+  color: var(--neutral-transparent-white);
+  line-height: 1.7;
+}
+
+.link {
+  padding: 1.5rem 0;
+  text-align: center;
+  width: 15rem;
+  display: block;
+  margin-top: 8rem;
+  text-decoration: none;
+  border-radius: 100px;
+}
+
+.link:link,
+.link:visited {
+  background-color: var(--neutral-very-light-gray);
+}
+
+.link:hover,
+.link:active {
+  outline: 2px solid var(--neutral-very-light-gray);
+}
+
+.first-link:link,
+.first-link:visited {
+  color: var(--primary-bright-orange);
+}
+
+.second-link:link,
+.second-link:visited {
+  color: var(--primary-dark-cyan);
+}
+
+.third-link:link,
+.third-link:visited {
+  color: var(--primary-very-dark-cyan);
+}
+
+.first-link:hover,
+.first-link:active {
+  background-color: var(--primary-bright-orange);
+  color: var(--neutral-very-light-gray);
+}
+
+.second-link:hover,
+.second-link:active {
+  background-color: var(--primary-dark-cyan);
+  color: var(--neutral-very-light-gray);
+}
+
+.third-link:hover,
+.third-link:active {
+  background-color: var(--primary-very-dark-cyan);
+  color: var(--neutral-very-light-gray);
+}
+
+@media (max-width: 24em) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .link {
+    margin-top: 2rem;
+  }
+}
